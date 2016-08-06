@@ -8,10 +8,10 @@ import (
 //Only Code and Domain are exported to encourage usage of the New(...) method to set the message and error.
 //JE is shorthand for JSONError.
 type JE struct {
-	Code    int
+	Code    int `json:"status"`
 	Domain  string
-	error   string
-	message string
+	error   string `json:"detail"`
+	message string `json:"title"`
 }
 
 //Creates a new JE struct.
